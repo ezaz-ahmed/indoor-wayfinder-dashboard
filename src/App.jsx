@@ -1,17 +1,23 @@
-import { Fragment } from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
-import Navbar from "./components/Navbar";
-import { useAuthContext } from "./hooks/useAuthContext";
+import {
+  QueryClient,
+  QueryClientProvider,
+} from '@tanstack/react-query'
+import { Toaster } from 'react-hot-toast';
 
+import { useAuthContext } from "./hooks/useAuthContext";
 import Home from "./page/Home";
 import Login from "./page/Login";
 import Signup from "./page/Signup";
+
+export const queryClient = new QueryClient()
 
 const App = () => {
   const { user } = useAuthContext();
 
   return (
-    <Fragment>
+
+    <QueryClientProvider client={queryClient}>
       <Routes>
         <Route path="/" element={user ? <Home /> : <Navigate to="/login" />} />
         <Route
@@ -23,7 +29,12 @@ const App = () => {
           element={!user ? <Signup /> : <Navigate to="/" />}
         />
       </Routes>
-    </Fragment>
+
+      <Toaster
+        position="bottom-right"
+        reverseOrder={true}
+      />
+    </QueryClientProvider>
   );
 };
 

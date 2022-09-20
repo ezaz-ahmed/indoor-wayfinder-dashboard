@@ -1,16 +1,34 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { useMutation } from '@tanstack/react-query';
+import toast from 'react-hot-toast';
 
 import Navbar from "../components/Navbar";
+import { login } from '../api/auth';
+import { useAuthContext } from '../hooks/useAuthContext';
 
 const Login = () => {
+  const navigate = useNavigate()
+  const { dispatch } = useAuthContext()
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const loginHandler = (ev) => {
+  const { mutateAsync, isError, error } = useMutation(login)
+
+  const loginHandler = async (ev) => {
     ev.preventDefault();
-    console.log(email, password);
+    const data = await mutateAsync({ email, password })
+
+    if (data.status === 201) {
+      localStorage.setItem('user', data.data)
+      dispatch({ type: "LOGIN", payload: data.data });
+      navigate('/')
+    }
   };
+
+  if (isError) {
+    toast.error(error.response.data.message)
+  }
 
   return (
     <div className="w-full flex flex-wrap">
