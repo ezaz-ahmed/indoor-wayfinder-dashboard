@@ -6,7 +6,7 @@ import Navbar from "../components/Navbar";
 // import { getAllBuildings } from '../api/building';
 // import toast from 'react-hot-toast';
 
-const Home = () => {
+const Floor = () => {
 
   // const { user } = useAuthContext()
 
@@ -24,20 +24,20 @@ const Home = () => {
 
       <div className="container mx-auto py-4">
         <div className=' flex justify-between py-2 align-middle'>
-          <span className="text-2xl font-bold text-gray-900 ">List Of Buidlings</span>
+          <span className="text-2xl font-bold text-gray-900 ">List Of Floors in Building BIST Bhaban</span>
 
           <button type="button" className="text-white bg-blue-600 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center mr-2">
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path></svg>
 
             <span>
-              Create New Building
+              Create New Floor In BIST Bhaban
             </span>
           </button>
         </div>
 
         <div class="p-4 mt-4 text-sm flex flex-row text-gray-700 bg-gray-100 rounded-lg " role="alert">
           <div className='basis-5/6'>
-            <span class="font-bold text-lg">BIST Bhaban -</span> Kakrail, Dhaka, Bangladesh
+            <span class="font-bold text-lg">Ground Floor </span>
           </div>
 
           <div className='basis-1/6 flex flex-row justify-around text-xs'>
@@ -57,7 +57,7 @@ const Home = () => {
 
         <div class="p-4 mt-4 text-sm flex flex-row text-gray-700 bg-gray-100 rounded-lg " role="alert">
           <div className='basis-5/6'>
-            <span class="font-bold text-lg">Shahjalal International Airport -</span> Airpot, Dhaka, Bangladesh
+            <span class="font-bold text-lg">First Floor </span>
           </div>
 
           <div className='basis-1/6 flex flex-row justify-around text-xs'>
@@ -77,7 +77,7 @@ const Home = () => {
 
         <div class="p-4 mt-4 text-sm flex flex-row text-gray-700 bg-gray-100 rounded-lg " role="alert">
           <div className='basis-5/6'>
-            <span class="font-bold text-lg">Dhaka Medical College Hospital -</span> Chankharpul, Dhaka, Bangladesh
+            <span class="font-bold text-lg">Second Floor </span>
           </div>
 
           <div className='basis-1/6 flex flex-row justify-around text-xs'>
@@ -97,7 +97,7 @@ const Home = () => {
 
         <div class="p-4 mt-4 text-sm flex flex-row text-gray-700 bg-gray-100 rounded-lg " role="alert">
           <div className='basis-5/6'>
-            <span class="font-bold text-lg">Jamuna Future Park -</span> Bashundhara, Dhaka, Bangladesh
+            <span class="font-bold text-lg">Third Floor </span>
           </div>
 
           <div className='basis-1/6 flex flex-row justify-around text-xs'>
@@ -119,4 +119,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Floor;
