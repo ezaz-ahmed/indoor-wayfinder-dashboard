@@ -49,37 +49,43 @@ const Navbar = () => {
 
                   <Menu.Item>
                     {({ active }) => (
-                      <button
-                        className={`${active ? 'bg-violet-500 text-white' : 'text-gray-900'
-                          } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
-                      >
+                      <Link to="/floor">
+                        <button
+                          className={`${active ? 'bg-violet-500 text-white' : 'text-gray-900'
+                            } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
+                        >
 
-                        Floor
-                      </button>
+                          Floor
+                        </button>
+                      </Link>
                     )}
                   </Menu.Item>
 
                   <Menu.Item>
                     {({ active }) => (
-                      <button
-                        className={`${active ? 'bg-violet-500 text-white' : 'text-gray-900'
-                          } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
-                      >
+                      <Link to="/room">
+                        <button
+                          className={`${active ? 'bg-violet-500 text-white' : 'text-gray-900'
+                            } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
+                        >
 
-                        Room
-                      </button>
+                          Room
+                        </button>
+                      </Link>
                     )}
                   </Menu.Item>
 
                   <Menu.Item>
                     {({ active }) => (
-                      <button
-                        className={`${active ? 'bg-violet-500 text-white' : 'text-gray-900'
-                          } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
-                      >
+                      <Link to="/qr">
+                        <button
+                          className={`${active ? 'bg-violet-500 text-white' : 'text-gray-900'
+                            } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
+                        >
 
-                        QR Code
-                      </button>
+                          QR Code
+                        </button>
+                      </Link>
                     )}
                   </Menu.Item>
                 </div>

@@ -22,7 +22,7 @@ const App = () => {
 
     <QueryClientProvider client={queryClient}>
       <Routes>
-        <Route path="/" element={user ? <QR /> : <Navigate to="/login" />} />
+        <Route path="/" element={user ? <Home /> : <Navigate to="/login" />} />
         <Route
           path="/login"
           element={!user ? <Login /> : <Navigate to="/" />}
@@ -31,6 +31,22 @@ const App = () => {
           path="/signup"
           element={!user ? <Signup /> : <Navigate to="/" />}
         />
+
+        <Route
+          path="/floor"
+          element={<Floor />}
+        />
+
+        <Route
+          path="/room"
+          element={<Rooms />}
+        />
+
+        <Route
+          path="/qr"
+          element={<QR />}
+        />
+
       </Routes>
 
       <Toaster

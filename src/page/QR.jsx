@@ -1,11 +1,12 @@
 import { Fragment } from "react";
-import QRCode from '../assets/qr.png'
+
 // import { useQuery } from '@tanstack/react-query';
 
 import Navbar from "../components/Navbar";
 // import { useAuthContext } from '../hooks/useAuthContext';
-// import { getAllBuildings } from '../api/building';
-// import toast from 'react-hot-toast';
+// import { getAllBuildings-hot-toast';
+
+
 
 const QR = () => {
 
@@ -23,16 +24,11 @@ const QR = () => {
     <Fragment>
       <Navbar />
 
-      <div className="container mx-auto py-4">
-        <div className=' flex justify-center py-2 align-middle'>
-          <span className="text-2xl font-bold text-gray-900 text-center ">QR Code of BIST Office</span>
-        </div>
+      <div className="container mx-auto py-4 flex align-middle justify-center">
+        {/* <button type="submit" className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"> */}
 
-        <div className=' flex justify-center py-2 align-middle'>
-
-          <img class="object-contain h-48 w-96" src={QRCode} />
-        </div>
-
+        <a href='/ar.zip' className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" download>Click to download Ar File</a>
+        {/* </button> */}
       </div>
     </Fragment >
   );
